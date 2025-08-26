@@ -7,7 +7,6 @@ import React, { useState, Suspense, useRef, useEffect } from 'react'
 // import { Canvas } from '@react-three/fiber';
 // import { OrbitControls, useGLTF } from '@react-three/drei';
 // import computerLoveUrl from '../assets/models/computer_love.glb?url';
-import computerLoveVideo from '../assets/video/computer-love.mp4?url';
 import TechArchitecture from './TechArchitecture';
 import ImprintShowcase from './ImprintShowcase';
 import SuperIndividualShowcase from './SuperIndividualShowcase';
@@ -83,7 +82,7 @@ function AutoPlayVideo() {
     return () => el.removeEventListener('canplay', play);
   }, []);
   return (
-    <video ref={ref} src={computerLoveVideo} muted autoPlay loop playsInline
+    <video ref={ref} src={`${import.meta.env.BASE_URL}videos/computer-love.mp4`} muted autoPlay loop playsInline
       style={{width:'100%', height:'100%', objectFit:'cover', display:'block'}} />
   );
 }
