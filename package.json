@@ -1,0 +1,33 @@
+{
+  "name": "vibecheck",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@google/genai": "latest",
+    "@react-three/drei": "^10.7.4",
+    "@react-three/fiber": "^9.3.0",
+    "@react-three/rapier": "^2.1.0",
+    "@splinetool/react-spline": "^4.1.0",
+    "auto-zustand-selectors-hook": "latest",
+    "clsx": "latest",
+    "immer": "latest",
+    "lodash.shuffle": "latest",
+    "p-limit": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-syntax-highlighter": "latest",
+    "three": "^0.179.1",
+    "zustand": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  }
+}
