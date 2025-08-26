@@ -3,14 +3,9 @@
  * SPDX-License-Identifier: Apache-2.0
 */
 import React, { useState, Suspense, useRef, useEffect } from 'react'
-// 删除 Three 相关依赖用于该区域的视频播放
-// import { Canvas } from '@react-three/fiber';
-// import { OrbitControls, useGLTF } from '@react-three/drei';
-// import computerLoveUrl from '../assets/models/computer_love.glb?url';
 import TechArchitecture from './TechArchitecture';
 import ImprintShowcase from './ImprintShowcase';
 import SuperIndividualShowcase from './SuperIndividualShowcase';
-// import SplineGameGLB from './SplineGameGLB.jsx';
 
 const CraftifyLogo = () => (
   <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -33,7 +28,7 @@ const Header = () => (
     <div className="logo-and-links">
       <div className="logo">
         <CraftifyLogo />
-        <span>Craftify</span>
+        <span>One-Eye</span>
       </div>
       <nav>
         <ul>
