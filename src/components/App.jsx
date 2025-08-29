@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
 */
 import React, { useState, Suspense, useRef, useEffect } from 'react'
+import { rem, remSpace } from '../lib/units';
 import TechArchitecture from './TechArchitecture';
 import ImprintShowcase from './ImprintShowcase';
 import SuperIndividualShowcase from './SuperIndividualShowcase';
@@ -95,12 +96,12 @@ const MockupUI = () => (
         <div className="mockup-main">
             <div className="mockup-main-header">
                 <div className="header-left">
-                    <span className="icon" style={{fontSize: '20px'}}>arrow_back_ios_new</span>
+                    <span className="icon" style={{fontSize: rem(20)}}>arrow_back_ios_new</span>
                     <div>
-                        <p style={{color: 'white', fontSize: '13px'}}>HR Manage</p>
-                        <p style={{fontSize: '11px', opacity: 0.5}}>Awe Studio/HR Project</p>
+                        <p style={{color: 'white', fontSize: rem(13)}}>HR Manage</p>
+                        <p style={{fontSize: rem(11), opacity: 0.5}}>Awe Studio/HR Project</p>
                     </div>
-                    <span className="icon" style={{fontSize: '20px'}}>visibility</span>
+                    <span className="icon" style={{fontSize: rem(20)}}>visibility</span>
                 </div>
                 <div className="header-right">
                     <span>W 1440</span>
@@ -108,13 +109,13 @@ const MockupUI = () => (
                     <span className="icon">desktop_windows</span>
                     <span className="icon">tablet_mac</span>
                     <span className="icon">phone_iphone</span>
-                    <button className="btn" style={{background: 'rgba(255,255,255,0.1)', padding: '8px 16px', fontSize: '13px'}}>Share</button>
-                    <button className="btn" style={{background: '#6F39FF', color: 'white', padding: '8px 16px', fontSize: '13px'}}>Publish</button>
+                    <button className="btn" style={{background: 'rgba(255,255,255,0.1)', padding: remSpace(8, 16), fontSize: rem(13)}}>Share</button>
+                    <button className="btn" style={{background: '#6F39FF', color: 'white', padding: remSpace(8, 16), fontSize: rem(13)}}>Publish</button>
                 </div>
             </div>
             <div className="mockup-main-content">
                 <div className="website-preview">
-                  <div className="preview-canvas-root" style={{width:'100%', height:'100%', borderRadius:'8px', overflow:'hidden'}}>
+                  <div className="preview-canvas-root" style={{width:'100%', height:'100%', borderRadius: rem(8), overflow:'hidden'}}>
                     <AutoPlayVideo />
                   </div>
                 </div>
@@ -126,8 +127,8 @@ const MockupUI = () => (
                     <span>Selector</span>
                     <span className="icon">expand_less</span>
                 </div>
-                <div className="mockup-accordion-content" style={{display: 'flex', alignItems: 'center', gap: '8px'}}>
-                    <span className="icon" style={{fontSize: '20px'}}>space_dashboard</span>
+                <div className="mockup-accordion-content" style={{display: 'flex', alignItems: 'center', gap: rem(8)}}>
+                    <span className="icon" style={{fontSize: rem(20)}}>space_dashboard</span>
                     <span>Header Section</span>
                 </div>
             </div>
@@ -141,7 +142,7 @@ const MockupUI = () => (
                     <div className="spacing-box">
                        <span>0</span>
                     </div>
-                    <p style={{marginTop: '8px'}}>PADDING</p>
+                    <p style={{marginTop: rem(8)}}>PADDING</p>
                 </div>
             </div>
         </div>
@@ -162,52 +163,52 @@ const featuresData = [
   {
     title: "AI-Powered Design Assistance",
     description: "Get personalized design recommendations with AI-powered tools that helping you create a polished, professional website effortlessly.",
-    visual: (<div style={{width: '80%', height: '60%', background: '#160E33', borderRadius: '6px', border: '1px solid var(--panel-border)', padding: '8px', display: 'flex', flexDirection: 'column', gap: '8px'}}>
-      <div style={{height: '20px', background: 'rgba(255,255,255,0.1)', borderRadius: '4px'}}></div>
-      <div style={{height: '20px', background: 'rgba(255,255,255,0.1)', borderRadius: '4px', width: '70%'}}></div>
-      <div style={{height: '30px', background: 'var(--primary-violet)', borderRadius: '4px', marginTop: 'auto', alignSelf: 'flex-end', width: '40%'}}></div>
+    visual: (<div style={{width: '80%', height: '60%', background: '#160E33', borderRadius: rem(6), border: '1px solid var(--panel-border)', padding: rem(8), display: 'flex', flexDirection: 'column', gap: rem(8)}}>
+      <div style={{height: rem(20), background: 'rgba(255,255,255,0.1)', borderRadius: rem(4)}}></div>
+      <div style={{height: rem(20), background: 'rgba(255,255,255,0.1)', borderRadius: rem(4), width: '70%'}}></div>
+      <div style={{height: rem(30), background: 'var(--primary-violet)', borderRadius: rem(4), marginTop: 'auto', alignSelf: 'flex-end', width: '40%'}}></div>
     </div>)
   },
   {
     title: "Customizable Templates",
     description: "Choose from a wide range of professionally designed templates, and customize fonts, colors, and layouts to reflect your brand.",
-    visual: (<div style={{width: '80%', height: '60%', display: 'flex', gap: '8px'}}>
-      <div style={{flex: 1, background: '#160E33', borderRadius: '6px', border: '1px solid var(--panel-border)', transform: 'rotate(-5deg) translateY(5px)'}}></div>
-      <div style={{flex: 1, background: '#160E33', borderRadius: '6px', border: '1px solid var(--panel-border)', transform: 'scale(1.05)', zIndex: 1}}></div>
-      <div style={{flex: 1, background: '#160E33', borderRadius: '6px', border: '1px solid var(--panel-border)', transform: 'rotate(5deg) translateY(5px)'}}></div>
+    visual: (<div style={{width: '80%', height: '60%', display: 'flex', gap: rem(8)}}>
+      <div style={{flex: 1, background: '#160E33', borderRadius: rem(6), border: '1px solid var(--panel-border)', transform: `rotate(-5deg) translateY(${rem(5)})`}}></div>
+      <div style={{flex: 1, background: '#160E33', borderRadius: rem(6), border: '1px solid var(--panel-border)', transform: 'scale(1.05)', zIndex: 1}}></div>
+      <div style={{flex: 1, background: '#160E33', borderRadius: rem(6), border: '1px solid var(--panel-border)', transform: `rotate(5deg) translateY(${rem(5)})`}}></div>
     </div>)
   },
   {
     title: "SEO Tools Built-In",
     description: "Boost your website visibility with integrated SEO tools.",
-    visual: (<div style={{width: '80%', height: '60%', display: 'flex', alignItems: 'flex-end', gap: '8px', padding: '0 10px'}}>
-      {[40, 60, 50, 75, 65, 85].map((h, i) => <div key={i} style={{width: '12%', height: `${h}%`, background: `linear-gradient(to top, var(--primary-violet), var(--light-violet))`, borderRadius: '4px 4px 0 0'}}></div>)}
+    visual: (<div style={{width: '80%', height: '60%', display: 'flex', alignItems: 'flex-end', gap: rem(8), padding: remSpace(0, 10)}}>
+      {[40, 60, 50, 75, 65, 85].map((h, i) => <div key={i} style={{width: '12%', height: `${h}%`, background: `linear-gradient(to top, var(--primary-violet), var(--light-violet))`, borderRadius: remSpace(4, 4, 0, 0)}}></div>)}
     </div>)
   },
   {
     title: "APIs and Integrations",
     description: "Easily connect with your favorite apps and services for a website experience.",
     visual: (<div style={{width: '80%', height: '80%', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-      <div style={{width: '80px', height: '80px', border: '2px dashed var(--panel-border)', borderRadius: '50%'}}></div>
-      <div style={{width: '120px', height: '120px', border: '2px dashed var(--panel-border)', borderRadius: '50%', position: 'absolute'}}></div>
-      <span className="icon" style={{position: 'absolute', color: 'white', background: 'var(--primary-violet)', padding: '8px', borderRadius: '50%', fontSize: '24px'}}>hub</span>
+      <div style={{width: rem(80), height: rem(80), border: `${rem(2)} dashed var(--panel-border)`, borderRadius: '50%'}}></div>
+      <div style={{width: rem(120), height: rem(120), border: `${rem(2)} dashed var(--panel-border)`, borderRadius: '50%', position: 'absolute'}}></div>
+      <span className="icon" style={{position: 'absolute', color: 'white', background: 'var(--primary-violet)', padding: rem(8), borderRadius: '50%', fontSize: rem(24)}}>hub</span>
     </div>)
   },
   {
     title: "Responsive Design",
     description: "Create websites that look great on any device.",
-    visual: (<div style={{width: '80%', height: '60%', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px'}}>
-      <span className="icon" style={{fontSize: '48px'}}>desktop_windows</span>
-      <span className="icon" style={{fontSize: '36px'}}>tablet_mac</span>
-      <span className="icon" style={{fontSize: '24px'}}>phone_iphone</span>
+    visual: (<div style={{width: '80%', height: '60%', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: rem(8)}}>
+      <span className="icon" style={{fontSize: rem(48)}}>desktop_windows</span>
+      <span className="icon" style={{fontSize: rem(36)}}>tablet_mac</span>
+      <span className="icon" style={{fontSize: rem(24)}}>phone_iphone</span>
     </div>)
   },
   {
     title: "Analytics and Reporting",
     description: "Track your website's performance and gain valuable insights.",
-    visual: (<div style={{width: '80%', height: '60%', background: '#160E33', borderRadius: '6px', border: '1px solid var(--panel-border)', padding: '8px', display: 'flex', justifyContent: 'space-between'}}>
-      <div style={{width: '60%', height: '100%', background: 'rgba(255,255,255,0.1)', borderRadius: '4px'}}></div>
-      <div style={{width: '35%', height: '100%', background: 'rgba(255,255,255,0.1)', borderRadius: '4px'}}></div>
+    visual: (<div style={{width: '80%', height: '60%', background: '#160E33', borderRadius: rem(6), border: '1px solid var(--panel-border)', padding: rem(8), display: 'flex', justifyContent: 'space-between'}}>
+      <div style={{width: '60%', height: '100%', background: 'rgba(255,255,255,0.1)', borderRadius: rem(4)}}></div>
+      <div style={{width: '35%', height: '100%', background: 'rgba(255,255,255,0.1)', borderRadius: rem(4)}}></div>
     </div>)
   },
 ];
@@ -223,7 +224,7 @@ const FeatureCard = ({ title, description, visual }) => (
 const Features = () => (
   <section className="section features">
     <div className="section-eyebrow">
-      <span className="icon" style={{fontSize: '16px'}}>tune</span>
+      <span className="icon" style={{fontSize: rem(16)}}>tune</span>
       <span>Features</span>
     </div>
     <h2 className="section-title">Powerful features to simplify your<br/>web building experience</h2>
@@ -316,14 +317,14 @@ const CreativeShowcase = () => {
         <>
             <section className="section creative-showcase">
                 <div className="section-eyebrow">
-                    <span className="icon" style={{fontSize: '16px'}}>interests</span>
+                    <span className="icon" style={{fontSize: rem(16)}}>interests</span>
                     <span>Creative Hub</span>
                 </div>
                 <h2 className="section-title">Showcasing 3D Models, AI Videos & Images</h2>
                 <p className="section-description">
                     Explore a curated gallery of assets generated and designed with our powerful creative tool suite.
                 </p>
-                <div className="macos-window-mockup" style={{marginTop: '48px'}}>
+                <div className="macos-window-mockup" style={{marginTop: rem(48)}}>
                     <div className="macos-window-header">
                         <div className="traffic-lights">
                             <div className="traffic-light red"></div>
