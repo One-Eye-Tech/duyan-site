@@ -78,7 +78,7 @@ function AutoPlayVideo() {
     return () => el.removeEventListener('canplay', play);
   }, []);
   return (
-    <video ref={ref} src={`${import.meta.env.BASE_URL}videos/computer-love.mp4`} muted autoPlay loop playsInline
+    <video ref={ref} src={`${import.meta.env.BASE_URL}videos/duyan.mp4`} muted autoPlay loop playsInline
       style={{width:'100%', height:'100%', objectFit:'cover', display:'block'}} />
   );
 }
