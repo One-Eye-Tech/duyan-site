@@ -8,7 +8,7 @@ export default function ImprintShowcase() {
         <div className="product-showcase-grid">
           <div className="product-content">
             <span className="section-tag">Our Core Projects</span>
-            <h2>Imprint (我的印记)</h2>
+            <h2>teetee</h2>
             <p>The first mobile app that lets users quickly apply memorable photos—like travel pictures, family portraits, and original designs—onto apparel, phone cases, mugs, and more. It supports real-time previews and detailed customizations to achieve highly personalized physical products.</p>
             <ul className="product-features">
               <li><Icon name="check" /> AI-Powered Visualizations</li>

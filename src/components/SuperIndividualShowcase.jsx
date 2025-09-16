@@ -42,7 +42,7 @@ export default function SuperIndividualShowcase() {
           </div>
           <div className="product-content">
             <span className="section-tag">Our Core Projects</span>
-            <h2>Super Individual (超级个体)</h2>
+            <h2>SoloHub</h2>
             <p>A digital product trading and customization platform for original musicians, designers, photographers, and developers. It provides a complete service for showcasing work, trading, custom commissions, and creator revenue recovery—a practical alternative to centralized platforms.</p>
             <ul className="product-features">
               <li><Icon name="check" /> Digital Product Marketplace</li>
